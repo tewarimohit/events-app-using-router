@@ -1,5 +1,7 @@
 import {
   Form,
+  json,
+  redirect,
   useActionData,
   useNavigate,
   useNavigation,
@@ -17,8 +19,12 @@ function EventForm({ method, event }) {
     navigate("..");
   }
 
+  // If we want to trigger an form action on a component but do not want to load that component through routing
+  // useFetcher is to the rescue
+  // fetcher=useFetcher()
+  // then we can use fetcher.Form, fetcher.submit etc..
   return (
-    <Form method="post" className={classes.form}>
+    <Form method={method} className={classes.form}>
       {data && data.errors && (
         <ul>
           {Object.values(data.errors).map((err) => (
@@ -79,3 +85,30 @@ function EventForm({ method, event }) {
 }
 
 export default EventForm;
+
+export async function eventFormAction({ request, params }) {
+  const method = request.method;
+  const id = params.eventId;
+  const data = await request.formData();
+  const requestData = {
+    title: data.get("title"),
+    image: data.get("image"),
+    date: data.get("date"),
+    description: data.get("description"),
+  };
+  const response = await fetch(`http://localhost:8080/events/${id ? id : ""}`, {
+    method: method,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(requestData),
+  });
+
+  if (response.status === 422) {
+    console.log("here", response);
+    return response;
+  }
+  if (!response.ok) {
+    throw json({ message: "Could not save event.." }, { status: 500 });
+  }
+
+  return redirect("/events");
+}
