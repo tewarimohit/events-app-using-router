@@ -23,6 +23,7 @@ function EventForm({ method, event }) {
   // useFetcher is to the rescue
   // fetcher=useFetcher()
   // then we can use fetcher.Form, fetcher.submit etc..
+  // useful for the component used in multiple pages.
   return (
     <Form method={method} className={classes.form}>
       {data && data.errors && (

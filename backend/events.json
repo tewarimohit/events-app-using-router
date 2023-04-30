@@ -1,1 +1,12 @@
-{"events":[{"title":"test","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","date":"2023-04-09","description":"sdfsdfsdfsd an","id":"74dcaa08-fb33-40e9-9671-4a7adbc2a860"},{"title":"World Record","image":"https://www.newyorkupstate.com/resizer/rHQ5xSBeY0JLtAn2aOdOu9zCeYk=/800x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.newyorkupstate.com/home/nyup-media/width2048/img/attractions/photo/2016/03/28/video-game-world-recordjpg-546d0a14811bd2e7.jpg","date":"2023-04-06","description":"New World Record","id":"17451f4d-484f-4b64-8ed2-82fef9cc6c10"},{"title":"The Great Supper","image":"https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80","date":"2023-04-20","description":"Awesome lunch at my place..","id":"5418c9b9-e4f9-49fb-8f1b-c27c53d718e8"},{"title":"Partyyyyy","image":"https://www.brides.com/thmb/2keoujsWRkcFpRYqn5QFK0sYSX8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Intimate-Wedding-8adc89264f284ddba3d3646207cec88c.png","date":"2023-04-30","description":"Awesome lunch organized..","id":"c2152ee1-1798-440f-b333-5878498f8f12"},{"title":"any event","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","date":"2023-04-29","description":"dfsfdsfs dfsdfsdf","id":"e5363416-db29-426b-b8a6-2bb519a6b7a2"},{"title":"ny","image":"https://cdn-apabk.nitrocdn.com/QQUvjmPGpOGmpUxCkqAsSnVUjfEULAuk/assets/images/optimized/rev-4dbbe90/wp-content/uploads/2021/02/Office-Party-Games-Main-e1613964977969.jpg","date":"2023-04-29","description":"any !!","id":"fb048a0d-d76f-4087-9b15-8aecf2586250"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}
+{
+  "events": [
+    {
+      "title": "A new event",
+      "image": "https://cdn.muenchen-p.de/fl_progressive,q_65/.imaging/stk/responsive/teaser300/dms/va-2016/muenchner-christkindlmarkt/christkindlmarkt-marienplat-logo-hp/document/christkindlmarkt-marienplat-logo-hp.jpg",
+      "date": "2022-10-01",
+      "description": "Some awesome event!",
+      "id": "2a42fcc4-ea21-4bdd-abf6-c40006dc66a9"
+    }
+  ],
+  "users": []
+}
