@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootComponent from "./pages/RootComponent";
 import HomePage from "./pages/HomePage";
-import EventsPage, { eventsListLoader } from "./pages/EventsPage";
+// import { eventsListLoader } from "./pages/EventsPage";
 import EventDetailPage, {
   deleteEventAction,
   loadEventItems,
@@ -14,6 +14,9 @@ import { eventFormAction } from "./components/EventForm";
 import AuthenticationPage, { authAction } from "./pages/AuthenticationPage";
 import { logoutAction } from "./pages/Logout";
 import { checkAuthLoader, tokenLoader } from "./util/auth";
+import { Suspense, lazy } from "react";
+
+const EventsPage = lazy(() => import("./pages/EventsPage"));
 
 const router = createBrowserRouter([
   {
@@ -30,8 +33,15 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <EventsPage />,
-            loader: eventsListLoader, // routes to page after data gets loaded.
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <EventsPage />
+              </Suspense>
+            ),
+            loader: () =>
+              import("./pages/EventsPage").then((module) =>
+                module.eventsListLoader()
+              ), // routes to page after data gets loaded.
           },
           {
             path: ":eventId",
